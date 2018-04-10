@@ -11,6 +11,7 @@ function start () {
   // Your turn! Create a new function called `two`, then call it from here.
   two();
   three();
+  four();
 }
 
 function one () {
@@ -45,6 +46,18 @@ function three () {
 
 // CREATE FUNCTION four HERE
 
+function four () {
+  let four = document.getElementById('four');
+
+  four.addEventListener('mouseenter', makeYellow);
+  four.addEventListener('mouseleave', makeWhite);
+
+  four.addEventListener('mousedown', dafoe);
+  four.addEventListener('mouseup', undafoe);
+
+}
+
+
 // Changes the background color of event's target
 function makeBlue (evt) {
   evt.target.style.backgroundColor = 'blue'
@@ -65,4 +78,17 @@ function makeGreen(evt) {
 
 function makeOrange(evt) {
   evt.target.style.backgroundColor = 'orange';
+}
+
+function makeYellow(evt) {
+  evt.target.style.backgroundColor = 'yellow';
+}
+
+function dafoe(evt) {
+  document.getElementById('two').innerHTML = '<img src="https://www.metro.us/sites/default/files/styles/normal_article/public/main/articles/2017/10/05/willem-dafoe-spiderman.jpg">';
+  
+}
+
+function undafoe(evt) {
+  document.getElementById('two').innerHTML = '';
 }
